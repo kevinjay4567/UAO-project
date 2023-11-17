@@ -36,7 +36,13 @@ function getMember(index) {
       <div class="overflow-x-auto">
         <div class="flex gap-14 lg:justify-center my-10 h-48 lg:pl-24 w-fit overflow-x-auto whitespace-nowrap">
           <div v-for="(member, index) in members" class="inline-block h-36 w-36 rounded-full overflow-hidden">
-            <img class="w-full hover:cursor-pointer" @click="getMember(index)" :src="member.img" />
+            <img v-if="index === 0" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/Kevin_imagen.jpeg" />
+            <img v-if="index === 1" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/Arturo_imagen.jpeg" />
+              <img v-if="index === 2" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/Adriana_imagen.png" />
+              <img v-if="index === 3" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/Maria_imagen.jpeg" />
+              <img v-if="index === 4" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/Jhonatan_imagen.png" />
+              <img v-if="index === 5" class="w-full hover:cursor-pointer" @click="getMember(index)" src="./assets/imgs/David_imagen.jpg" />
+
           </div>
         </div>
       </div>
